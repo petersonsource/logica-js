@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+
+
+<script type="text/javascript">
+
+function pulaLinha() {
+	document.write("<br>");
+	document.write("<br>");
+}
+
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+
+function sorteia(n) {
+	return numeroPensado = Math.round(Math.random() * n);
+}
+
+numeroPensado = sorteia(10) ;
+console.log(numeroPensado);
+
+var chances = 1;
+
+while(chances <=3) { 
+
+	var chute = parseInt(prompt("digite seu chute:"));
+
+	if(chute ==  numeroPensado) {
+		mostra("voce acertou");
+		break;
+	}
+
+	else {
+		mostra("voce errou !");
+	}
+chances++
+
+}
+
+
+
+</script>
+ 

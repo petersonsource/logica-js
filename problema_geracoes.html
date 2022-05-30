@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+
+
+<script type="text/javascript">
+	
+var anoDescobrimento = 1500;
+var anoAtual = 2022;
+var mediaGeracao = 28
+
+function pulaLinha() {
+
+document.write("<br>")
+
+}
+
+function calulcaGeracoes(anoDescobrimento, anoAtual, mediaGeracao) {
+
+	var geracoes = Math.round((anoAtual - anoDescobrimento)/28);
+
+	document.write("de " + anoDescobrimento + " ate " + anoAtual);
+	pulaLinha()
+	document.write("se passaram <big>" + geracoes + " </big> gerações");
+}
+
+calulcaGeracoes(anoDescobrimento, anoAtual, mediaGeracao);
+
+</script>
