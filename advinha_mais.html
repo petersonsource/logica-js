@@ -7,6 +7,48 @@
 
 <script type="text/javascript">
 
+	function sorteia() {
+
+		return Math.round(Math.random() * 10);
+	}
+
+	function sorteiraNumeros(quantidade) {
+
+		var segredos = [];
+		var numero = 1;
+
+		while (numero <= quantidade) {
+					
+			segredoAleatorio = sorteia(); 
+
+			if (segredoAleatorio !== 0) {
+				
+				var achou = false;
+
+				for(var i = 0; i < segredos.length; i++) {
+					if ( segredos[i] == segredoAleatorio) {
+						achou = true;
+						break;
+					}
+				}
+				
+				if(achou == false){
+					segredos.push((segredoAleatorio));
+					numero++;
+				}
+
+			}
+		}
+		
+	return segredos;
+
+	}
+
+	var segredos = sorteiraNumeros(5);
+	
+	console.log(segredos);
+
+
 	function verifica() {
 
 		var achou = false;
@@ -29,11 +71,6 @@
 	input.focus();
 
 	}
-
-	var segredos = [5,7,10,2,3];
-	//var segredo = Math.round(Math.random() * 10);
-	
-	//console.log(segredo);
 
 	var input = document.querySelector("input");
 	input.focus();
